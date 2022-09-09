@@ -1,0 +1,15 @@
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.csproj.AssemblyReference.cache
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.AssemblyInfoInputs.cache
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.AssemblyInfo.cs
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.csproj.CoreCompileInputs.cache
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\bin\Debug\net6.0\ABC265_B.exe
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\bin\Debug\net6.0\ABC265_B.deps.json
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\bin\Debug\net6.0\ABC265_B.runtimeconfig.json
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\bin\Debug\net6.0\ABC265_B.dll
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\bin\Debug\net6.0\ABC265_B.pdb
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.dll
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\refint\ABC265_B.dll
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.pdb
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ABC265_B.genruntimeconfig.cache
+C:\Users\goshi\Desktop\git\atcoder\0909\ABC265_B\obj\Debug\net6.0\ref\ABC265_B.dll
