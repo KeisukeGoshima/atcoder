@@ -1,0 +1,15 @@
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\bin\Debug\net6.0\ABC260_C.exe
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\bin\Debug\net6.0\ABC260_C.deps.json
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\bin\Debug\net6.0\ABC260_C.runtimeconfig.json
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\bin\Debug\net6.0\ABC260_C.dll
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\bin\Debug\net6.0\ABC260_C.pdb
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.csproj.AssemblyReference.cache
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.AssemblyInfoInputs.cache
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.AssemblyInfo.cs
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.csproj.CoreCompileInputs.cache
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.dll
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\refint\ABC260_C.dll
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.pdb
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ABC260_C.genruntimeconfig.cache
+C:\Users\goshi\Desktop\git\atcoder\0912\ABC260_C\obj\Debug\net6.0\ref\ABC260_C.dll
