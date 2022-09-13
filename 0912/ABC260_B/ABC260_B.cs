@@ -13,68 +13,32 @@ namespace ABC260_B
             var X = input[1];
             var Y = input[2];
             var Z = input[3];
-            Student[] student = new Student[N];
-            var A = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var B = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var solve = new int[X+Y+Z];
-            var index = 0;
+            List<Student> students = new List<Student>();
+            var A = Console.ReadLine().Split(' ').Select(int.Parse);
+            var B = Console.ReadLine().Split(' ').Select(int.Parse);
+            //LINQでclassの各要素に代入してリスト化するやり方がわかりません。
             for (int i = 0; i < N; i++)
             {
-                student[i].number = i+1;
-                student[i].math = A[i];
-                student[i].english = B[i];
-                student[i].sum = A[i] + B[i];
+                Student student = new Student();
+                student.number = i + 1;
+                student.math = A.ElementAt(i);
+                student.english = B.ElementAt(i);
+                student.sum = student.math + student.english;
+                students.Add(student);
             }
-            var solve_X = student.OrderByDescending(x => x.math).Where((x, index) => index < X).Select(x => x.number);
-            foreach (int num in solve_X)
-            {
-                solve[index++] = num;
-            } 
-            var solve_Y = student.OrderByDescending(x => x.english).Select(x => x.number);
-            var count = Y;
-            var flag = true;
-            foreach (int num in solve_Y)
-            {
-                flag = true;
-                if (count == 0) break;
-                for (int i = 0; i < X; i++) if (num == solve[i]) flag = false;
-                if (flag)
-                {
-                    solve[index++] = num;
-                    count--;
-                }
-            }
-            var solve_Z = student.OrderByDescending(x => x.sum).Select(x => x.number);
-            count = Z;
-            foreach (int num in solve_Z)
-            {
-                flag = true;
-                if (count == 0) break;
-                for (int i = 0; i < X + Y; i++) if (num == solve[i]) flag = false;
-                if (flag)
-                {
-                    solve[index++] = num;
-                    count--;
-                }
-            }
+            var solve_X = students.OrderByDescending(x => x.math).Select(x => x.number).Take(X);
+            var solve_Y = students.OrderByDescending(x => x.english).Where(x => solve_X.All(y => y != x.number)).Select(x => x.number).Take(Y);
+            var solve_Z = students.OrderByDescending(x => x.sum).Where(x => solve_X.All(y => y != x.number) && solve_Y.All(z => z != x.number)).Select(x => x.number).Take(Z);
+            var solve = solve_X.Concat(solve_Y).Concat(solve_Z);
             var output = solve.OrderBy(x => x);
             foreach (int num in output) Console.WriteLine(num);
         }
-
-        public struct Student
-        {
-            public int number;
-            public int math;
-            public int english;
-            public int sum;
-
-            public Student(int number, int math, int english, int sum)
-            {
-                this.number = number;
-                this.math = math;
-                this.english = english;
-                this.sum = sum;
-            }
-        }
+    }
+    class Student
+    {
+        public int number { get; set; }
+        public int math { get; set; }
+        public int english { get; set; }
+        public int sum { get; set; }
     }
 }

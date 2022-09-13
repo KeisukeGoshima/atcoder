@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Runtime;
 
 namespace ABC260_C
 {
@@ -8,7 +9,16 @@ namespace ABC260_C
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var input = Console.ReadLine().Split(' ').Select(x => {
+                var temp = -1;
+                if (int.TryParse(x, out temp)) return temp;
+                else
+                {
+                    Console.WriteLine("不正な値が入力されました");
+                    Environment.Exit(-1);
+                    return 0;
+                }
+            }).ToArray();
             int N = input[0];
             int X = input[1];
             int Y = input[2];
