@@ -11,24 +11,19 @@ namespace ABC267C
             var S = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var N = S[0];
             var M = S[1];
-            var A = Console.ReadLine().Split(' ').Select(long.Parse);
-            long num = 0;
-            long add_sum = 0;
-            for (int i=0; i < S[1]; i++)
-            {
-                num += A.ElementAt(N-(i+1)) * (M - i);
-                add_sum += A.ElementAt(N-(i+1));
-            }
-            long max_num = num;
-            for (int i=0; i < S[0] - S[1]; i++)
-            {
-                num -= M * A.ElementAt(N-(i+1));
-                add_sum += A.ElementAt(N - i - M - 1) - A.ElementAt(N - i - 1);
-                num += add_sum;
-                if (max_num < num)
-                    max_num = num;
-            }
-            Console.WriteLine(max_num);
+            var A = Console.ReadLine().Split(' ').Select(long.Parse).ToList();
+            var init_num = A.Where((x, index) => index < M - 1).Select((x, index) => x * (index + 2)).Sum();
+            var init_sub_sum = A.Where((x, index) => index < M - 1).Select(x => x).Sum();
+            long num = init_num;
+            long sub_sum = init_sub_sum;
+            var solve = A.Where((x, index) => index <= N - M).Select((x, index) => {
+                num += M * A[index + M - 1];
+                num -= init_sub_sum;
+                init_sub_sum += A[index + M - 1];
+                if (index != 0) init_sub_sum -= A[index - 1];
+                return num;
+            });
+            Console.WriteLine(solve.Max());
         }
     }
 }
