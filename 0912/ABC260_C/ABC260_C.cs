@@ -9,16 +9,17 @@ namespace ABC260_C
     {
         static void Main(string[] args)
         {
+            List<bool> check = new List<bool>();
             var input = Console.ReadLine().Split(' ').Select(x => {
-                var temp = -1;
-                if (int.TryParse(x, out temp)) return temp;
-                else
-                {
-                    Console.WriteLine("不正な値が入力されました");
-                    Environment.Exit(-1);
-                    return 0;
-                }
-            }).ToArray();
+                var temp = 0;
+                check.Add(int.TryParse(x, out temp));
+                return temp;
+            }).ToList();
+            if (check.Any(x => x == false))
+            {
+                Console.WriteLine("不正な値が入力されました");
+                Environment.Exit(-1);
+            }
             int N = input[0];
             int X = input[1];
             int Y = input[2];

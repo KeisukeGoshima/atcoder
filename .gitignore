@@ -6,3 +6,8 @@
 /dataSources.local.xml
 # エディターベースの HTTP クライアントリクエスト
 /httpRequests/
+
+bin/
+.idea/
+obj/
+*.csproj/
