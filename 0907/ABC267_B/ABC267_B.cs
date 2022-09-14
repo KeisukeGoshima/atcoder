@@ -20,10 +20,7 @@ namespace ABC267B
             {
                 S[6], S[3], S[7] + S[1], S[4] + S[0], S[8] + S[2], S[5], S[9]
             };
-            if (S[0] == 1)
-            {
-                Console.WriteLine("No");
-            }
+            if (S[0] == 1) Console.WriteLine("No");
             else
             {
                 for (int i = 0; i <= 6; i++)
