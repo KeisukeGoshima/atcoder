@@ -18,7 +18,7 @@ namespace ABC260_C
             if (check.Any(x => x == false))
             {
                 Console.WriteLine("不正な値が入力されました");
-                Environment.Exit(-1);
+                return ;
             }
             int N = input[0];
             int X = input[1];

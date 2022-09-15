@@ -16,7 +16,7 @@ namespace ABC260_B
             var A = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
             var B = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
             var students = Enumerable.Range(1, N).Select(x => {
-                Student student = new Student(x, A[x-1], B[x-1]);
+                var student = new Student(x, A[x-1], B[x-1]);
                 return student;
             }).ToList();
             var solve_X = students.OrderByDescending(x => x.Math).Select(x => x.Number).Take(X);
