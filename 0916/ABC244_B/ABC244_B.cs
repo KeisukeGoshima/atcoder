@@ -9,7 +9,11 @@ namespace ABC_244_B
         static void Main(string [] args)
         {
             var program = new Program();
-            var input = program.Read_int();
+            program.solve();
+        }
+        void solve()
+        {
+            var input = ReadInt();
             if (input == null) return ;
             var N = input[0];
             var T = Console.ReadLine().ToList();
@@ -28,9 +32,10 @@ namespace ABC_244_B
             var south = solve.Where(x => x == 1).Count();
             var west = solve.Where(x => x == 2).Count();
             var north = solve.Where(x => x == 3).Count();
-            Console.WriteLine("{0} {1}", east - west, north - south);
+            var output = new List<int> {east - west, north - south};
+            WriteInt(output);
         }
-        List<int> Read_int()
+        List<int> ReadInt()
         {
             var check = new List<bool>();
             var input = Console.ReadLine().Split(' ').Select(x => {
@@ -40,6 +45,11 @@ namespace ABC_244_B
             }).ToList();
             if (check.Any(x => x == false)) return null;
             return input;
+        }
+        void WriteInt(List<int> solve)
+        {
+            solve.ForEach(x => Console.Write("{0} ", x));
+            Console.WriteLine("");
         }
     }
 }

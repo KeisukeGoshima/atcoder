@@ -1,8 +1,8 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 
-namespace ABC_244_C
+namespace ABC_243B
 {
     class Program
     {
@@ -17,21 +17,17 @@ namespace ABC_244_C
             var input = ReadInt();
             if (input == null) return ;
             var N = input[0];
-            var number_list = Enumerable.Repeat(1, 2*N + 1).ToList();
-            while (true)
-            {
-                var Takahashi = number_list.Select((x, index) => x * (index + 1)).Where(x => x != 0).Take(1).ToList();
-                WriteInt(Takahashi[0]);
-                number_list[Takahashi[0] - 1] = 0;
-                var input2 = ReadInt();
-                if (input2 == null) return ;
-                var Aoki = input2[0];
-                if (Aoki == 0) return ;
-                number_list[Aoki - 1] = 0;
-            }
+            var A = ReadInt();
+            if (A == null) return ;
+            var B = ReadInt();
+            if (B == null) return ;
+            var solve1 = Enumerable.Range(0, N).Where(x => A[x] == B[x]).Count();
+            var solve2 = Enumerable.Range(0, N).Where(x => A.Any(y => y == B[x])).Count();
+            WriteInt(solve1);
+            WriteInt(solve2 - solve1);
         }
 
-       List<int> ReadInt()
+        List<int> ReadInt()
         {
             var check = new List<bool>();
             var input = Console.ReadLine().Split(' ').Select(x => {
