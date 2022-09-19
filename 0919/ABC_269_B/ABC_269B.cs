@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace ABC_243B
+namespace ABC_269B
 {
     class Program
     {
@@ -11,22 +11,14 @@ namespace ABC_243B
             var program = new Program();
             program.solve();
         }
-
         void solve()
         {
-            var input = ReadInt();
-            if (input == null) return ;
-            var N = input[0];
-            var A = ReadInt();
-            if (A == null) return ;
-            var B = ReadInt();
-            if (B == null) return ;
-            var perfectMatch = Enumerable.Range(0, N).Where(x => A[x] == B[x]).Count();
-            var partialMatch = Enumerable.Range(0, N).Where(x => A.Any(y => y == B[x])).Count();
-            WriteInt(perfectMatch);
-            WriteInt(perfectMatch - partialMatch);
+            var input = Enumerable.Range(0, 10).Select(_ => Console.ReadLine()).ToList();
+            var X = Enumerable.Range(0, 10).Where(x => input[x].Any(y => y=='#')).Select(x => x+1).ToList();
+            var Y = Enumerable.Range(0, 10).Where(x => input[X[0] - 1][x] == '#').Select(x => x+1).ToList();
+            Console.WriteLine("{0} {1}", X[0], X[X.Count() - 1]);
+            Console.WriteLine("{0} {1}", Y[0], Y[Y.Count() - 1]);
         }
-
         List<int> ReadInt()
         {
             var check = new List<bool>();
