@@ -21,10 +21,10 @@ namespace ABC_243B
             if (A == null) return ;
             var B = ReadInt();
             if (B == null) return ;
-            var solve1 = Enumerable.Range(0, N).Where(x => A[x] == B[x]).Count();
-            var solve2 = Enumerable.Range(0, N).Where(x => A.Any(y => y == B[x])).Count();
-            WriteInt(solve1);
-            WriteInt(solve2 - solve1);
+            var perfectMatch = Enumerable.Range(0, N).Where(x => A[x] == B[x]).Count();
+            var partialMatch = Enumerable.Range(0, N).Where(x => A.Any(y => y == B[x])).Count();
+            WriteInt(perfectMatch);
+            WriteInt(perfectMatch - partialMatch);
         }
 
         List<int> ReadInt()
